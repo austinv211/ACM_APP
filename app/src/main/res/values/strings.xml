@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ACM App Austin Vargason</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="nav_home_title">Home</string>
+    <string name="nav_announcements_title">Announcements</string>
+    <string name="nav_resources_title">Resources</string>
+    <string name="nav_about_us_title">About Us</string>
+    <string name="social_media_title">Social Media</string>
+    <string name="nav_facebook_title">Facebook</string>
+    <string name="nav_instagram_title">Instagram</string>
+</resources>
