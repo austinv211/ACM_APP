@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#242323</color>
     <color name="colorAccent">#F0C429</color>
     <color name="textColor">#FFFFFF</color>
+    <color name="noteCardColor">#bfbebb</color>
 </resources>

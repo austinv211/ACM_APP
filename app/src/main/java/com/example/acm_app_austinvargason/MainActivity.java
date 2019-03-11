@@ -32,6 +32,14 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // replace the fragment with the home fragment
+        HomeFragment homeFragment = new HomeFragment();
+        android.support.v4.app.FragmentTransaction fragmentTransaction =
+                getSupportFragmentManager().beginTransaction();
+
+        fragmentTransaction.replace(R.id.fragment_container, homeFragment);
+        fragmentTransaction.commit();
     }
 
     @Override
@@ -78,6 +86,14 @@ public class MainActivity extends AppCompatActivity
                     getSupportFragmentManager().beginTransaction();
 
             fragmentTransaction.replace(R.id.fragment_container, homeFragment);
+            fragmentTransaction.commit();
+        }
+        else if (id == R.id.nav_resources) {
+            ResourcesFragment resourcesFragment = new ResourcesFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+
+            fragmentTransaction.replace(R.id.fragment_container, resourcesFragment);
             fragmentTransaction.commit();
         }
 

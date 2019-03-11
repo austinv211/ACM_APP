@@ -13,4 +13,11 @@
     <string name="social_media_title">Social Media</string>
     <string name="nav_facebook_title">Facebook</string>
     <string name="nav_instagram_title">Instagram</string>
+    <string name="resources_note_card_text">If you have any questions or concerns about office hours, workshop
+             times, tutoring hours or just want to give us some general feed back,
+             feel free to send us an email! You can also reach out to us on our
+              official facebook page and Instagram!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
