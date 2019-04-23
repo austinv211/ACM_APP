@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "469031084558",
+    "firebase_url": "https://acmappaustinvargason.firebaseio.com",
+    "project_id": "acmappaustinvargason",
+    "storage_bucket": "acmappaustinvargason.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469031084558:android:d555472cc795f326",
+        "android_client_info": {
+          "package_name": "com.example.acm_app_austinvargason"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469031084558-q9gc099k175fplogck4vfs0o84dvjn8n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acm_app_austinvargason",
+            "certificate_hash": "4d1ec7e21dfb126dd695b31b732c02afc5682396"
+          }
+        },
+        {
+          "client_id": "469031084558-g473te4dsigc8lfmmpkngh9mr5t3csd6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVpsof5Nce2BE3GqjE-h8--sAq_PSmke8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469031084558-g473te4dsigc8lfmmpkngh9mr5t3csd6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

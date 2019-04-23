@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -99,6 +98,17 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.commit();
 
             getSupportActionBar().setTitle("RESOURCES");
+        }
+        else if (id == R.id.nav_announcements) {
+            Announcements announcements = new Announcements();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+
+            fragmentTransaction.replace(R.id.fragment_container, announcements);
+            fragmentTransaction.commit();
+
+            getSupportActionBar().setTitle("ANNOUNCEMENTS");
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
