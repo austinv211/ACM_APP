@@ -46,8 +46,6 @@ public class ResourcesFragment extends Fragment {
         //Find the results TextView in our XML through Id
         recyclerView = rootView.findViewById(R.id.hackathons_recycler);
 
-
-
         //LoadJSON is a custom method, we take in the parameter container since this is a fragment.
         LoadJson(container);
 
