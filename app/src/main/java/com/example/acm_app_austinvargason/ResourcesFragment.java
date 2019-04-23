@@ -3,10 +3,14 @@ package com.example.acm_app_austinvargason;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.acm_app_austinvargason.recyclerview.RecyclerHackathons;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +26,8 @@ import retrofit2.Response;
 public class ResourcesFragment extends Fragment {
 
     //members
-    TextView results;
+    private RecyclerView recyclerView;
+    private RecyclerHackathons recyclerAdapter;
     List<Event> hackathons;
 
     public ResourcesFragment() {
@@ -39,7 +44,9 @@ public class ResourcesFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_resources, container, false);
 
         //Find the results TextView in our XML through Id
-        results = rootView.findViewById(R.id.results);
+        recyclerView = rootView.findViewById(R.id.hackathons_recycler);
+
+
 
         //LoadJSON is a custom method, we take in the parameter container since this is a fragment.
         LoadJson(container);
@@ -59,14 +66,16 @@ public class ResourcesFragment extends Fragment {
             public void onResponse(Call<List<Event>> call, Response<List<Event>> response) {
                 hackathons = filterEvents(response.body());
                 for (Event event : hackathons) {
-                    String content = "";
-                    content += "Name: " + event.getName() + "\n";
-                    content += "Location: " + event.getLocation() + "\n";
-                    content += "Start Date: " + event.getStartDate() + "\n";
-                    content += "End Date: " + event.getEndDate() + "\n";
-                    content += "URL: " + event.getUrl() + "\n\n";
+                    //Here, we create an instance of our Adapter named RecyclerHackathons, we supply the necessary parameters.
+                    recyclerAdapter = new RecyclerHackathons(hackathons, container.getContext());
 
-                    results.append(content);
+                    //Now, we set the layout manager. Since we want everything displayed vertically in a Linear fashion, we will use the LinearLayoutManager. There are other layout managers out there which can be found on the LayoutManager documentation.
+                    recyclerView.setLayoutManager(new LinearLayoutManager(container.getContext()));
+
+                    //We set our adapter.
+                    recyclerView.setAdapter(recyclerAdapter);
+                    //This method notifies RecyclerView whenever data is changed.
+                    recyclerAdapter.notifyDataSetChanged();
                 }
             }
 
