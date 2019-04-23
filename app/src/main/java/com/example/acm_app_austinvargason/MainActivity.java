@@ -9,9 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setTitle("HOME");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -84,6 +87,8 @@ public class MainActivity extends AppCompatActivity
 
             fragmentTransaction.replace(R.id.fragment_container, homeFragment);
             fragmentTransaction.commit();
+
+            getSupportActionBar().setTitle("HOME");
         }
         else if (id == R.id.nav_resources) {
             ResourcesFragment resourcesFragment = new ResourcesFragment();
@@ -92,6 +97,8 @@ public class MainActivity extends AppCompatActivity
 
             fragmentTransaction.replace(R.id.fragment_container, resourcesFragment);
             fragmentTransaction.commit();
+
+            getSupportActionBar().setTitle("RESOURCES");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
