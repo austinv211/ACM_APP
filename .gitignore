@@ -8,7 +8,9 @@
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+/.idea/encodings.xml
 .DS_Store
 /build
 /captures
 .externalNativeBuild
+/app/google-service.json
